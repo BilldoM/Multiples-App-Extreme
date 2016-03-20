@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var multiplyButton: UIButton!
     
     @IBAction func onPressMultiplyButton(sender: AnyObject) {
+        
+        counterCount++
+        
         let newSum = runningSum + multiplier
         updateLabel(runningSum, mul: multiplier, newSum: newSum)
         runningSum += multiplier
@@ -37,10 +40,6 @@ class ViewController: UIViewController {
 
     
     @IBAction func pressPlayButton(sender: AnyObject) {
-        
-            counterCount += 1
-            print(counterCount)
-        
         
         if multiplyTextField.text != nil && multiplyTextField.text != "" {
             
@@ -77,7 +76,7 @@ class ViewController: UIViewController {
    
     
     func gameOver() -> Bool {
-        if counterCount == maxPress {
+        if counterCount >= maxPress {
         return true
         } else {
             return false
