@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBAction func onPressMultiplyButton(sender: AnyObject) {
         
         counterCount++
+        print(counterCount)
         
         let newSum = runningSum + multiplier
         updateLabel(runningSum, mul: multiplier, newSum: newSum)
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
     }
     
     func reLoadGame() {
+        counterCount = 0
         multiplier = 0
         multiplyTextField.text = ""
         multiplyTextField.hidden = false
