@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func onPressMultiplyButton(sender: AnyObject) {
         
-        counterCount++
+        counterCount = counterCount + 1
         print(counterCount)
         
         let newSum = runningSum + multiplier
